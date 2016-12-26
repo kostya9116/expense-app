@@ -1,0 +1,71 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.required {
+  border: 1px solid red;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loginFormContainer {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.fieldsPartContainer {
+  padding: 0;
+  margin: 0;
+
+}
+
+.fieldsContainer {
+  height: 100%;
+}
+
+.emptyDiv {
+  display: none;
+}

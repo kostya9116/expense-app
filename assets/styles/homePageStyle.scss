@@ -1,0 +1,178 @@
+/*
+@font-face {
+  font-family: pacifico;
+  src: url('./fonts/Pacifico/Pacifico.ttf');
+}
+
+@font-face {
+  font-family: amaticRegular;
+  src: url('./fonts/Amatic_SC/AmaticSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: amaticBold;
+  src: url('fonts/Amatic_SC/AmaticSC-Bold.ttf');
+}
+
+@font-face {
+  font-family: ralewayRegular;
+  src: url('fonts/raleway/ralewayRegular/Raleway.eot');
+  src: url('fonts/raleway/ralewayRegular/Raleway.svg');
+  src: url('fonts/raleway/ralewayRegular/Raleway.ttf');
+  src: url('fonts/raleway/ralewayRegular/Raleway.woff');
+}
+*/
+
+html:after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.logInFormButtonsContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.footerButtonsContainer {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.footerButton, .footerButton:target, .footerButton:visited {
+  width: 104px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px transparent solid;
+  height: 42px;
+  margin: 0 30px !important;
+  outline-style: none;
+  border-radius: 25px;
+  font-family: ralewayRegular;
+  font-size: 19px;
+  line-height: 0;
+  letter-spacing: 2px;
+  color: white !important;
+
+}
+
+.footerButton:active {
+  color: grey !important;
+}
+
+.footerButton:hover, .footerButton:focus {
+  background-color: transparent !important;
+  border: 1px rgba(255, 255, 255, 0.5) solid !important;
+  border-radius: 25px !important;
+  outline-style: none !important;
+  color: white !important;
+}
+
+.displayNone {
+  display: none;
+}
+
+/*Log In Form Style Start */
+
+.logInFormContainer,
+.signUpFormContainer,
+.signUpCompleteFormContainer {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.loginFormPanelContainer.panel.panel-default, .signUpFormPanelContainer.panel.panel-default, .signUpCompletePanelContainer.panel.panel-default {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+}
+
+.signUpFormPanelContainer > .panel-heading,
+.loginFormPanelContainer > .panel-heading {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  font-family: ralewayRegular;
+  font-size: 43px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.logInFormFieldsContainer, .signUpFormFieldsContainer {
+  margin: 15px 40px;
+
+}
+
+.loginFormErrorMessage {
+  width: fit-content;
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: red;
+  font-size: 18px;
+  font-family: ralewayRegular;
+  font-weight: 600;
+
+}
+
+.loginFormFieldContainer, .signUpFormFieldContainer {
+  margin-bottom: 25px;
+  width: 267px;
+
+}
+
+.signUpFormLabelsTatile {
+  font-family: ralewayRegular;
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.redPlaceholder::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: red;
+}
+
+.redPlaceholder:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: red;
+  opacity: 1;
+}
+
+.redPlaceholder::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: red;
+  opacity: 1;
+}
+
+.redPlaceholder:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.signUpCompletePanelContainer > .panel-heading {
+  text-align: center;
+  font-weight: bold;
+  font-family: ralewayRegular;
+  font-size: 24px;
+}
+
+.signUpCompleteFormParagraphText {
+  font-family: ralewayRegular;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+/*Log In Form Style End */
