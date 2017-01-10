@@ -29,7 +29,8 @@
     "comma-spacing": ["error", { "before": false, "after": true }],
     "space-in-parens": ["error", "never"],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
-    "object-shorthand": 0
+    "object-shorthand": 0,
+    "no-console": 0
   },
   "extends": [
     "eslint:recommended",

@@ -4,10 +4,7 @@ import store from "store";
 import {Form, Button, Message} from "semantic-ui-react";
 
 class SignUpForm extends Component {
-    static propTypes = {
-        addNewUser: React.PropTypes.func,
-        updateSelectedIndex: React.PropTypes.func,
-    };
+    static propTypes = {};
 
     constructor(props) {
         super(props);
@@ -79,7 +76,7 @@ class SignUpForm extends Component {
                     "password": hashedPass,
                     "logInStatus": false
                 };
-                this.props.addNewUser(userInfo);
+                this.props.actions.create("userList", userInfo)
             }
         }
         this.setState({errorMessage: errorMessage});

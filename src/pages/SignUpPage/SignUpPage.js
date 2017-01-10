@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import "./style/signUpFormStyle.scss";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import SignUpContainer from "../../containers/SignUpContainer/SignUpContainer";
 
 class SignUpPage extends Component {
 
     render() {
         return (
-            <SignUpForm/>
+            <SignUpContainer/>
         );
     }
 }

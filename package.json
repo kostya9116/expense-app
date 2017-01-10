@@ -112,6 +112,7 @@
     "react-tap-event-plugin": "^2.0.0",
     "react-webstorage": "0.0.4",
     "redux": "^3.5.2",
+    "redux-actions": "^1.2.0",
     "redux-form": "^5.2.5",
     "redux-localstorage": "^0.4.1",
     "redux-logger": "^2.6.1",
