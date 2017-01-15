@@ -29,7 +29,7 @@ class SignUpForm extends Component {
         ((prevHash << 5) - prevHash) + currVal.charCodeAt(0), 0);
     }
 
-    validation(e, { formData }) {
+    validation(e, {formData}) {
         e.preventDefault();
         const registeredUsersList = store.get("usersList");
         const firstName = formData.firstName;
@@ -76,10 +76,10 @@ class SignUpForm extends Component {
                     "password": hashedPass,
                     "logInStatus": false
                 };
-                this.props.actions.create("userList", userInfo)
+                this.props.actions.create("userList", userInfo);
             }
         }
-        this.setState({errorMessage: errorMessage});
+        (errorMessage ? this.setState({errorMessage: errorMessage}) : browserHistory.push("/login"));
     }
 
     enterEvent(e) {

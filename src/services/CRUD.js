@@ -1,19 +1,16 @@
 import React, {Component} from "react";
 import store from "store";
 
-export default class CRUDService extends Component {
-
-    constructor(props) {
-        super();
-    }
+export default class CRUDService {
 
     create(dataFolder, data) {
-        let dataLocation = store.get(dataFolder);
-        if (dataLocation) {
-            dataLocation.push(data);
+        let storedData = store.get(dataFolder);
+        if (storedData) {
+            storedData.push(data);
         } else {
-            dataLocation = [data];
+            storedData = [];
+            storedData.push(data);
         }
-        store.set([dataLocation], dataFolder);
+        store.set([dataFolder], storedData);
     }
 }

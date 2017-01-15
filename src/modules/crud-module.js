@@ -2,17 +2,9 @@ import {createAction, createReducer} from "redux-action";
 import {attachPromiseHandlers} from "../utils/promise-utils";
 
 const createItemAction = (actionName, service, thenFunc, catchFunc) => {
-    return createAction(actionName, (data) => {
+    return createAction(actionName, (dataFolder, data) => {
         const promise = new Promise((resolve, fault) => {
-            service.create(data).then(response => response.json())
-                .then((result) => {
-                    resolve(result);
-                }).catch((err) => {
-                /* eslint-disable no-console */
-                    console.log(err);
-                /* eslint-enable no-console */
-                    return err;
-                });
+            service.create(dataFolder, data);
         });
         attachPromiseHandlers(promise, thenFunc, catchFunc);
         return promise;
@@ -35,7 +27,6 @@ const createReducerFunction = (createAction, initialState) => {
         [createAction]: (actionPayload, state) => {
             return state;
         },
-
     });
 };
 
