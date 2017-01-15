@@ -13,6 +13,7 @@ const routes = (
                 <IndexRoute component={Pages.HomePage}/>
                 <Route path="login" component={Pages.LoginPage}/>
                 <Route path="sign_up" component={Pages.SignUpPage}/>
+                <Route path="sign_up_completed" component={Pages.SignUpCompletedPage}/>
             </Route>
         </Router>
     </Provider>

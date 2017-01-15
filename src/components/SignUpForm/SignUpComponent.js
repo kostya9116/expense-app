@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {browserHistory} from "react-router";
 import store from "store";
-import {Form, Button, Message} from "semantic-ui-react";
+import {Grid, Form, Button, Message} from "semantic-ui-react";
 
 class SignUpForm extends Component {
     static propTypes = {};
@@ -79,7 +79,7 @@ class SignUpForm extends Component {
                 this.props.actions.create("userList", userInfo);
             }
         }
-        (errorMessage ? this.setState({errorMessage: errorMessage}) : browserHistory.push("/login"));
+        (errorMessage ? this.setState({errorMessage: errorMessage}) : browserHistory.push("/sign_up_completed"));
     }
 
     enterEvent(e) {
@@ -90,7 +90,7 @@ class SignUpForm extends Component {
 
     render() {
         return (
-            <div className="signUpPageContainer">
+            <Grid className="signUpPageContainer">
                 <video id="background-video" loop autoPlay muted>
                     <source src={this.state.videoURL} type="video/mp4"/>
                     Your browser does not support the video tag.
@@ -141,7 +141,7 @@ class SignUpForm extends Component {
                     <Button type="submit" className="footerButton">Sign Up</Button>
                     <Button type="reset" className="footerButton" onClick={this.cancelButtonClick}>Cancel</Button>
                 </Form>
-            </div>
+            </Grid>
         );
     }
 }

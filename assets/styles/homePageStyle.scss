@@ -96,7 +96,7 @@ html:after {
 
 }
 
-.loginFormPanelContainer.panel.panel-default, .signUpFormPanelContainer.panel.panel-default, .signUpCompletePanelContainer.panel.panel-default {
+.loginFormPanelContainer.panel.panel-default, .signUpFormPanelContainer.panel.panel-default {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 18px;
 }
@@ -161,18 +161,6 @@ html:after {
   color: red;
 }
 
-.signUpCompletePanelContainer > .panel-heading {
-  text-align: center;
-  font-weight: bold;
-  font-family: ralewayRegular;
-  font-size: 24px;
-}
 
-.signUpCompleteFormParagraphText {
-  font-family: ralewayRegular;
-  text-align: center;
-  color: white;
-  font-size: 16px;
-}
 
 /*Log In Form Style End */

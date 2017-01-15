@@ -1,0 +1,67 @@
+.signUpCompletedPageContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUpCompletePanelContainer {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+}
+
+.signUpCompletedPageMessage {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 0;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  font-family: ralewayRegular;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: bold;
+
+}
+
+.signUpCompleteFormParagraphText {
+  font-family: ralewayRegular;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  height: fit-content;
+}
+
+.signUpCompleteFormContainer {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+}
+
+.footerButton, .footerButton:target, .footerButton:visited {
+  width: 104px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px transparent solid;
+  height: 42px;
+  margin: 15px 30px !important;
+  outline-style: none;
+  border-radius: 25px;
+  font-family: ralewayRegular;
+  font-size: 19px;
+  line-height: 0;
+  letter-spacing: 2px;
+  color: white !important;
+}
+
+.footerButton:active {
+  color: grey !important;
+}
+
+.footerButton:hover, .footerButton:focus {
+  background-color: transparent !important;
+  border: 1px rgba(255, 255, 255, 0.5) solid !important;
+  border-radius: 25px !important;
+  outline-style: none !important;
+  color: white !important;
+}
