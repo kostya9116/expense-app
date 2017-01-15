@@ -13,7 +13,7 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
         loaders: [{
@@ -27,6 +27,9 @@ module.exports = {
             test: /\.js$/,
             loader: "eslint-loader",
             exclude: /node_modules/
+        }, {
+            test: /\.png$/,
+            loader: 'file?name=assets/icons/[name].[hash].[ext]'
         }]
     }
 };

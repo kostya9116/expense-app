@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import HomePageBackgroundVideoComponent from "../HomePageBackgroundVideo/HomePageBackgroundVideoComponent";
 import {browserHistory} from "react-router";
 import store from "store";
 import {Grid, Form, Button, Message} from "semantic-ui-react";
@@ -9,8 +10,7 @@ class SignUpForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            errorMessage: "",
-            videoURL: "videos/homePageBackgroundVideo.mp4"
+            errorMessage: ""
         };
         this.validation = this.validation.bind(this);
         this.enterEvent = this.enterEvent.bind(this);
@@ -76,10 +76,10 @@ class SignUpForm extends Component {
                     "password": hashedPass,
                     "logInStatus": false
                 };
-                this.props.actions.create("userList", userInfo);
+                this.props.actions.create("userList", userInfo).then(response => browserHistory.push("/sign_up_completed"));
             }
         }
-        (errorMessage ? this.setState({errorMessage: errorMessage}) : browserHistory.push("/sign_up_completed"));
+        this.setState({errorMessage: errorMessage});
     }
 
     enterEvent(e) {
@@ -91,10 +91,7 @@ class SignUpForm extends Component {
     render() {
         return (
             <Grid className="signUpPageContainer">
-                <video id="background-video" loop autoPlay muted>
-                    <source src={this.state.videoURL} type="video/mp4"/>
-                    Your browser does not support the video tag.
-                </video>
+                <HomePageBackgroundVideoComponent/>
                 <Form size="large" className="signUpFormContainer" onSubmit={this.validation}>
                     <Form.Group className="signUpFormPanelContainer" widths="equal">
                         <Form.Field className="signUpFormHeaderContainer">

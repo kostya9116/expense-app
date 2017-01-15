@@ -1,13 +1,11 @@
 import React, {Component} from "react";
+import HomePageBackgroundVideoComponent from "../HomePageBackgroundVideo/HomePageBackgroundVideoComponent";
 import {Button, ButtonToolbar} from "react-bootstrap";
 import {browserHistory} from "react-router";
 
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            videoURL: "videos/homePageBackgroundVideo.mp4"
-        };
         this.loginButtonClick = this.loginButtonClick.bind(this);
         this.signUpButtonClick = this.signUpButtonClick.bind(this);
     }
@@ -23,10 +21,7 @@ class Home extends Component {
     render() {
         return (
             <div className="homePageContainer">
-                <video id="background-video" loop autoPlay muted>
-                    <source src={this.state.videoURL} type="video/mp4"/>
-                    Your browser does not support the video tag.
-                </video>
+                <HomePageBackgroundVideoComponent/>
                 <ButtonToolbar>
                     <Button className="footerButton"
                             onClick={this.loginButtonClick}

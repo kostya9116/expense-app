@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "./style/signUpCompletedFormStyle.scss";
-import SignUpCompleteForm from "../../components/SignUpCompleteForm/SignUpCompleteFormComponent";
+import SignUpCompleteForm from "../../containers/SignUpCompletedFormContainer/SignUpCompletedFormContainer";
 
 class SignUpCompletedFormPage extends Component {
 

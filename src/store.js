@@ -7,7 +7,9 @@ import createLogger from "redux-logger";
 import thunk from "redux-thunk";
 import persistState from "redux-localstorage";
 
-const initialState = {};
+const initialState = {
+   //signUpCompletedStatus: false
+};
 
 const loggerMiddleware = createLogger();
 const middlewares = [thunk, promiseMiddleware(), loggerMiddleware];

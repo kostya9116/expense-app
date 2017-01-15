@@ -1,18 +1,15 @@
 import {createAction, createReducer} from "redux-action";
 import SignUpService from "../services/SignUpService";
-import createCRUDModule from "./crud-module";
+import {browserHistory} from "react-router";
 
 export const CREATE_CATEGORY_ACTION = "CREATE_CATEGORY_ACTION";
 
 const initialState = {
-// Initial State goes here!
+    signUpCompletedStatus: false
 };
 
-const crud = createCRUDModule(new SignUpService(), {
-    createActionType: CREATE_CATEGORY_ACTION,
-}, initialState);
-
-const createItemAction = crud.create(CREATE_CATEGORY_ACTION, data => data);
+const service = new SignUpService();
+const createItemAction = createAction(CREATE_CATEGORY_ACTION, (dataFolder, data) => ([dataFolder, data]));
 
 export const actions = {
     create: createItemAction
@@ -20,5 +17,12 @@ export const actions = {
 
 export const complexActions = {};
 
-const signUpReducer = crud.reducer;
+const signUpReducer = createReducer(initialState, {
+    [CREATE_CATEGORY_ACTION]: (actionPayload, state) => {
+        service.create(actionPayload[0], actionPayload[1]);
+        return {...state, signUpCompletedStatus: true};
+    },
+
+});
+
 export default signUpReducer;
